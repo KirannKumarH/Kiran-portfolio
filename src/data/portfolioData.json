@@ -1,0 +1,345 @@
+{
+  "personalInfo": {
+    "name": "Kiran",
+    "title": "Full Stack Developer",
+    "subtitle": "Building amazing digital experiences",
+    "description": "Passionate developer with expertise in modern web technologies. I love creating innovative solutions and bringing ideas to life through code.",
+    "email": "kiran@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "Your City, Country",
+    "resumeUrl": "/resume.pdf",
+    "profileImage": "/src/assets/profile.png"
+  },
+  "socialLinks": {
+    "github": "https://github.com/KirannKumarH",
+    "linkedin": "https://linkedin.com/in/KirannKumarH",
+    "twitter": "https://twitter.com/KirannKumarH",
+    "email": "mailto:kiran@example.com"
+  },
+  "techStack": [
+    {
+      "name": "React",
+      "icon": "react",
+      "color": "#61DAFB",
+      "level": "Expert"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "typescript",
+      "color": "#3178C6",
+      "level": "Expert"
+    },
+    {
+      "name": "Node.js",
+      "icon": "nodejs",
+      "color": "#339933",
+      "level": "Advanced"
+    },
+    {
+      "name": "Python",
+      "icon": "python",
+      "color": "#3776AB",
+      "level": "Advanced"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "javascript",
+      "color": "#F7DF1E",
+      "level": "Expert"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "mongodb",
+      "color": "#47A248",
+      "level": "Intermediate"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "postgresql",
+      "color": "#336791",
+      "level": "Advanced"
+    },
+    {
+      "name": "AWS",
+      "icon": "aws",
+      "color": "#FF9900",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Docker",
+      "icon": "docker",
+      "color": "#2496ED",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Git",
+      "icon": "git",
+      "color": "#F05032",
+      "level": "Expert"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "Tech Company Inc.",
+      "position": "Senior Full Stack Developer",
+      "duration": "2022 - Present",
+      "location": "Remote",
+      "description": "Led development of scalable web applications using React, Node.js, and cloud technologies. Mentored junior developers and implemented CI/CD pipelines.",
+      "technologies": ["React", "Node.js", "TypeScript", "AWS", "Docker"],
+      "achievements": [
+        "Improved application performance by 40%",
+        "Led a team of 5 developers",
+        "Implemented automated testing reducing bugs by 60%",
+        "Architected microservices infrastructure serving 100K+ users",
+        "Reduced deployment time from 2 hours to 15 minutes"
+      ],
+      "responsibilities": [
+        "Lead technical architecture decisions for multiple product lines",
+        "Mentor junior and mid-level developers through code reviews and pair programming",
+        "Collaborate with product managers and designers to define technical requirements",
+        "Implement and maintain CI/CD pipelines using GitHub Actions and AWS",
+        "Conduct technical interviews and contribute to hiring decisions"
+      ],
+      "projects": [
+        {
+          "name": "E-commerce Platform Migration",
+          "description": "Led the migration of a legacy e-commerce platform to a modern microservices architecture, resulting in 50% faster page load times and 99.9% uptime.",
+          "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS"]
+        },
+        {
+          "name": "Real-time Analytics Dashboard",
+          "description": "Built a real-time analytics dashboard processing 1M+ events per day using WebSockets and data streaming technologies.",
+          "technologies": ["React", "TypeScript", "WebSockets", "Apache Kafka", "D3.js"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "StartupXYZ",
+      "position": "Full Stack Developer",
+      "duration": "2020 - 2022",
+      "location": "San Francisco, CA",
+      "description": "Developed and maintained web applications from concept to deployment. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+      "technologies": ["React", "Python", "PostgreSQL", "Redis"],
+      "achievements": [
+        "Built MVP that secured $2M funding",
+        "Reduced page load time by 50%",
+        "Implemented real-time features using WebSockets",
+        "Scaled application to handle 10K+ concurrent users",
+        "Established coding standards and best practices for the team"
+      ],
+      "responsibilities": [
+        "Develop full-stack features from database design to frontend implementation",
+        "Collaborate with product team to define user stories and acceptance criteria",
+        "Write comprehensive unit and integration tests",
+        "Optimize database queries and application performance",
+        "Participate in agile development processes and sprint planning"
+      ],
+      "projects": [
+        {
+          "name": "SaaS Platform MVP",
+          "description": "Built the core platform that enabled the startup to secure Series A funding. Implemented user authentication, subscription management, and core business logic.",
+          "technologies": ["React", "Python", "Django", "PostgreSQL", "Stripe API"]
+        },
+        {
+          "name": "Real-time Collaboration Tool",
+          "description": "Developed a real-time collaboration feature allowing multiple users to work simultaneously on documents with live updates.",
+          "technologies": ["React", "WebSockets", "Redis", "Node.js"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Digital Agency",
+      "position": "Frontend Developer",
+      "duration": "2019 - 2020",
+      "location": "New York, NY",
+      "description": "Created responsive and interactive user interfaces for various clients. Focused on user experience and modern web standards.",
+      "technologies": ["React", "JavaScript", "CSS3", "SASS"],
+      "achievements": [
+        "Delivered 15+ client projects on time",
+        "Improved client satisfaction scores by 30%",
+        "Mentored 2 junior developers",
+        "Implemented responsive design patterns across all projects",
+        "Reduced client feedback cycles by 40% through better communication"
+      ],
+      "responsibilities": [
+        "Develop responsive web applications using React and modern JavaScript",
+        "Collaborate with designers to implement pixel-perfect UI designs",
+        "Ensure cross-browser compatibility and accessibility standards",
+        "Optimize frontend performance and loading times",
+        "Mentor junior developers and conduct code reviews"
+      ],
+      "projects": [
+        {
+          "name": "Corporate Website Redesign",
+          "description": "Redesigned and rebuilt a corporate website for a Fortune 500 company, resulting in 60% increase in user engagement and improved SEO rankings.",
+          "technologies": ["React", "JavaScript", "SASS", "Webpack"]
+        },
+        {
+          "name": "E-commerce Mobile App",
+          "description": "Developed a mobile-first e-commerce application with offline capabilities and push notifications.",
+          "technologies": ["React", "PWA", "Service Workers", "CSS3"]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
+      "image": "/project1.jpg",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+      "githubUrl": "https://github.com/KirannKumarH/ecommerce-platform",
+      "liveUrl": "https://ecommerce-demo.com",
+      "category": "Full Stack",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, team collaboration features, and analytics dashboard.",
+      "image": "/project2.jpg",
+      "technologies": ["React", "TypeScript", "Socket.io", "PostgreSQL", "Redis"],
+      "githubUrl": "https://github.com/KirannKumarH/task-manager",
+      "liveUrl": "https://taskmanager-demo.com",
+      "category": "Full Stack",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "description": "A responsive weather dashboard with location-based forecasts, interactive maps, and historical data visualization.",
+      "image": "/project3.jpg",
+      "technologies": ["React", "D3.js", "OpenWeather API", "Chart.js"],
+      "githubUrl": "https://github.com/KirannKumarH/weather-dashboard",
+      "liveUrl": "https://weather-demo.com",
+      "category": "Frontend",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Blog CMS",
+      "description": "A content management system for blogs with markdown support, SEO optimization, and multi-author capabilities.",
+      "image": "/project4.jpg",
+      "technologies": ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
+      "githubUrl": "https://github.com/KirannKumarH/blog-cms",
+      "liveUrl": "https://blog-cms-demo.com",
+      "category": "Full Stack",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website with smooth animations, dark mode, and contact form integration.",
+      "image": "/project5.jpg",
+      "technologies": ["React", "Framer Motion", "Ant Design", "EmailJS"],
+      "githubUrl": "https://github.com/KirannKumarH/portfolio",
+      "liveUrl": "https://portfolio-demo.com",
+      "category": "Frontend",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "API Gateway",
+      "description": "A microservices API gateway with authentication, rate limiting, and request routing capabilities.",
+      "image": "/project6.jpg",
+      "technologies": ["Node.js", "Express", "Redis", "JWT", "Docker"],
+      "githubUrl": "https://github.com/KirannKumarH/api-gateway",
+      "liveUrl": null,
+      "category": "Backend",
+      "featured": false
+    }
+  ],
+  "skills": {
+    "frontend": [
+      { "name": "React", "icon": "⚛️", "proficiency": 5, "color": "#61DAFB" },
+      { "name": "TypeScript", "icon": "🔷", "proficiency": 5, "color": "#3178C6" },
+      { "name": "JavaScript", "icon": "🟨", "proficiency": 5, "color": "#F7DF1E" },
+      { "name": "Next.js", "icon": "▲", "proficiency": 4, "color": "#000000" },
+      { "name": "Vue.js", "icon": "💚", "proficiency": 3, "color": "#4FC08D" },
+      { "name": "HTML5", "icon": "🌐", "proficiency": 5, "color": "#E34F26" },
+      { "name": "CSS3", "icon": "🎨", "proficiency": 5, "color": "#1572B6" },
+      { "name": "Tailwind CSS", "icon": "💨", "proficiency": 4, "color": "#06B6D4" },
+      { "name": "SASS", "icon": "💎", "proficiency": 4, "color": "#CC6699" }
+    ],
+    "backend": [
+      { "name": "Node.js", "icon": "🟢", "proficiency": 5, "color": "#339933" },
+      { "name": "Python", "icon": "🐍", "proficiency": 4, "color": "#3776AB" },
+      { "name": "Express.js", "icon": "⚡", "proficiency": 5, "color": "#000000" },
+      { "name": "Django", "icon": "🎯", "proficiency": 3, "color": "#092E20" },
+      { "name": "FastAPI", "icon": "⚡", "proficiency": 4, "color": "#009688" },
+      { "name": "REST APIs", "icon": "🔗", "proficiency": 5, "color": "#FF6B6B" },
+      { "name": "GraphQL", "icon": "🔮", "proficiency": 4, "color": "#E10098" },
+      { "name": "Microservices", "icon": "🏗️", "proficiency": 3, "color": "#FFA500" }
+    ],
+    "database": [
+      { "name": "MongoDB", "icon": "🍃", "proficiency": 4, "color": "#47A248" },
+      { "name": "PostgreSQL", "icon": "🐘", "proficiency": 4, "color": "#336791" },
+      { "name": "MySQL", "icon": "🐬", "proficiency": 3, "color": "#4479A1" },
+      { "name": "Redis", "icon": "🔴", "proficiency": 3, "color": "#DC382D" },
+      { "name": "Elasticsearch", "icon": "🔍", "proficiency": 2, "color": "#005571" },
+      { "name": "Prisma", "icon": "🔷", "proficiency": 4, "color": "#2D3748" },
+      { "name": "Mongoose", "icon": "🍃", "proficiency": 4, "color": "#47A248" }
+    ],
+    "cloud": [
+      { "name": "AWS", "icon": "☁️", "proficiency": 3, "color": "#FF9900" },
+      { "name": "Google Cloud", "icon": "🌩️", "proficiency": 2, "color": "#4285F4" },
+      { "name": "Azure", "icon": "🔵", "proficiency": 2, "color": "#0078D4" },
+      { "name": "Docker", "icon": "🐳", "proficiency": 4, "color": "#2496ED" },
+      { "name": "Kubernetes", "icon": "⚓", "proficiency": 2, "color": "#326CE5" },
+      { "name": "Vercel", "icon": "▲", "proficiency": 4, "color": "#000000" },
+      { "name": "Netlify", "icon": "🌐", "proficiency": 3, "color": "#00C7B7" },
+      { "name": "Heroku", "icon": "🟣", "proficiency": 3, "color": "#430098" }
+    ],
+    "tools": [
+      { "name": "Git", "icon": "📝", "proficiency": 5, "color": "#F05032" },
+      { "name": "GitHub", "icon": "🐙", "proficiency": 5, "color": "#181717" },
+      { "name": "VS Code", "icon": "💻", "proficiency": 5, "color": "#007ACC" },
+      { "name": "Postman", "icon": "📮", "proficiency": 4, "color": "#FF6C37" },
+      { "name": "Figma", "icon": "🎨", "proficiency": 3, "color": "#F24E1E" },
+      { "name": "Jest", "icon": "🧪", "proficiency": 4, "color": "#C21325" },
+      { "name": "Cypress", "icon": "🌲", "proficiency": 3, "color": "#17202C" },
+      { "name": "Webpack", "icon": "📦", "proficiency": 3, "color": "#8DD6F9" },
+      { "name": "Babel", "icon": "🔄", "proficiency": 3, "color": "#F9DC3E" }
+    ],
+    "web3": [
+      { "name": "Ethereum", "icon": "⟠", "proficiency": 4, "color": "#627EEA" },
+      { "name": "Solidity", "icon": "⧫", "proficiency": 4, "color": "#363636" },
+      { "name": "Web3.js", "icon": "🌐", "proficiency": 4, "color": "#F16822" },
+      { "name": "Hardhat", "icon": "⛑️", "proficiency": 3, "color": "#F7DF1E" },
+      { "name": "IPFS", "icon": "📁", "proficiency": 3, "color": "#65C2CB" },
+      { "name": "Chainlink", "icon": "🔗", "proficiency": 3, "color": "#375BD2" }
+    ],
+    "ai-ml": [
+      { "name": "TensorFlow", "icon": "🧠", "proficiency": 3, "color": "#FF6F00" },
+      { "name": "PyTorch", "icon": "🔥", "proficiency": 3, "color": "#EE4C2C" },
+      { "name": "OpenAI API", "icon": "🤖", "proficiency": 4, "color": "#412991" },
+      { "name": "Pandas", "icon": "🐼", "proficiency": 4, "color": "#150458" },
+      { "name": "NumPy", "icon": "🔢", "proficiency": 4, "color": "#4D77CF" },
+      { "name": "Scikit-learn", "icon": "🔬", "proficiency": 3, "color": "#F7931E" }
+    ]
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Computer Science",
+      "institution": "University of Technology",
+      "year": "2015 - 2019",
+      "description": "Specialized in Software Engineering and Web Development"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "year": "2023"
+    },
+    {
+      "name": "React Developer Certification",
+      "issuer": "Meta",
+      "year": "2022"
+    }
+  ]
+}

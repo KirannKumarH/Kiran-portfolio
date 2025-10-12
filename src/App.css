@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary);
 }
 
-.App-header {
-  background-color: #282c34;
+.portfolio-layout {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: var(--color-bg-primary);
 }
 
-.App-link {
-  color: #61dafb;
+.portfolio-content {
+  margin-top: 70px;
 }
 
-@keyframes App-logo-spin {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-secondary) 100%);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Utility classes */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .portfolio-content {
+    margin-top: 60px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .portfolio-layout {
+    background: var(--color-bg-primary);
+  }
+  
+  .portfolio-content {
+    margin-top: 0;
   }
 }

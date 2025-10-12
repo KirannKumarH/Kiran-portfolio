@@ -1,0 +1,133 @@
+.portfolio-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+  transition: all 0.3s ease;
+  height: 70px;
+  line-height: 70px;
+}
+
+.portfolio-header.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6366F1;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.desktop-menu {
+  display: block;
+}
+
+.header-menu {
+  background: transparent;
+  border: none;
+  line-height: 70px;
+}
+
+.header-menu .ant-menu-item {
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  color: #F8FAFC;
+  font-weight: 500;
+}
+
+.header-menu .ant-menu-item:hover {
+  color: #6366F1;
+  border-bottom-color: #6366F1;
+}
+
+.header-menu .ant-menu-item-selected {
+  color: #6366F1;
+  border-bottom-color: #6366F1;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #F8FAFC;
+}
+
+.mobile-drawer .ant-drawer-header {
+  border-bottom: 1px solid #334155;
+  padding: 16px 24px;
+  background: #1E293B;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: #F8FAFC;
+}
+
+.mobile-menu {
+  border: none;
+  padding: 20px 0;
+  background: #1E293B;
+}
+
+.mobile-menu .ant-menu-item {
+  margin: 5px 0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #F8FAFC;
+}
+
+.mobile-menu .ant-menu-item:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366F1;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+}
