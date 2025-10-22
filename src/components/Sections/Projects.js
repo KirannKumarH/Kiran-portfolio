@@ -15,6 +15,8 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [showAllAchievements, setShowAllAchievements] = useState(false);
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
 
   const categories = ['All', ...new Set(portfolioData.projects.map(project => project.category))];
 
@@ -69,6 +71,8 @@ const Projects = () => {
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+    setShowAllAchievements(false);
+    setShowAllFeatures(false);
   };
 
   return (
@@ -102,9 +106,9 @@ const Projects = () => {
 
           <motion.div className="projects-grid" variants={containerVariants}>
             <AnimatePresence mode="wait">
-              <Row gutter={[30, 30]}>
+              <Row gutter={[30, 30]} justify="start">
                 {filteredProjects.map((project, index) => (
-                  <Col xs={24} sm={12} lg={8} key={project.id}>
+                  <Col xs={24} sm={12} md={8} lg={8} xl={8} key={project.id}>
                     <motion.div
                       variants={projectVariants}
                       initial="hidden"
@@ -119,11 +123,28 @@ const Projects = () => {
                         cover={
                           <div className="project-image">
                             <div className="image-placeholder">
-                              <span className="project-emoji">
-                                {project.category === 'Full Stack' && '🚀'}
-                                {project.category === 'Frontend' && '🎨'}
-                                {project.category === 'Backend' && '⚙️'}
-                              </span>
+                              <img 
+                                src={`/project-banner/${project.id === 1 ? 'neuraleye' : 
+                                  project.id === 2 ? 'proforma' : 
+                                  project.id === 3 ? 'seronic' : 
+                                  project.id === 4 ? 'ai-chatbot' : 
+                                  project.id === 5 ? 'portfolio' : 'proforma'}.png`}
+                                alt={project.title}
+                                className="project-banner-image"
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                  e.target.nextElementSibling.style.display = 'flex';
+                                }}
+                              />
+                              <div className="fallback-emoji" style={{display: 'none'}}>
+                                <span className="project-emoji">
+                                  {project.category === 'Full Stack' && '🚀'}
+                                  {project.category === 'Frontend' && '🎨'}
+                                  {project.category === 'Backend' && '⚙️'}
+                                  {project.category === 'AI/ML' && '🧠'}
+                                  {project.category === 'Mobile' && '📱'}
+                                </span>
+                              </div>
                             </div>
                             {project.featured && (
                               <div className="featured-badge">Featured</div>
@@ -239,11 +260,28 @@ const Projects = () => {
           <div className="modal-content">
             <div className="modal-image">
               <div className="image-placeholder">
-                <span className="project-emoji">
-                  {selectedProject.category === 'Full Stack' && '🚀'}
-                  {selectedProject.category === 'Frontend' && '🎨'}
-                  {selectedProject.category === 'Backend' && '⚙️'}
-                </span>
+                <img 
+                  src={`/project-banner/${selectedProject.id === 1 ? 'neuraleye' : 
+                    selectedProject.id === 2 ? 'proforma' : 
+                    selectedProject.id === 3 ? 'seronic' : 
+                    selectedProject.id === 4 ? 'ai-chatbot' : 
+                    selectedProject.id === 5 ? 'portfolio' : 'proforma'}.png`}
+                  alt={selectedProject.title}
+                  className="project-banner-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="fallback-emoji" style={{display: 'none'}}>
+                  <span className="project-emoji">
+                    {selectedProject.category === 'Full Stack' && '🚀'}
+                    {selectedProject.category === 'Frontend' && '🎨'}
+                    {selectedProject.category === 'Backend' && '⚙️'}
+                    {selectedProject.category === 'AI/ML' && '🧠'}
+                    {selectedProject.category === 'Mobile' && '📱'}
+                  </span>
+                </div>
               </div>
             </div>
             
@@ -271,6 +309,54 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+
+              {selectedProject.achievements && selectedProject.achievements.length > 0 && (
+                <div className="modal-achievements">
+                  <Title level={5}>Key Achievements:</Title>
+                  <ul className="achievements-list">
+                    {(showAllAchievements ? selectedProject.achievements : selectedProject.achievements.slice(0, 10)).map((achievement, index) => (
+                      <li key={index} className="achievement-item">
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                  {selectedProject.achievements.length > 10 && (
+                    <div className="read-more-section">
+                      <Button
+                        type="link"
+                        onClick={() => setShowAllAchievements(!showAllAchievements)}
+                        className="read-more-button"
+                      >
+                        {showAllAchievements ? 'Show Less' : `Read More (+${selectedProject.achievements.length - 10} more)`}
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {selectedProject.features && selectedProject.features.length > 0 && (
+                <div className="modal-features">
+                  <Title level={5}>Key Features:</Title>
+                  <ul className="features-list">
+                    {(showAllFeatures ? selectedProject.features : selectedProject.features.slice(0, 10)).map((feature, index) => (
+                      <li key={index} className="feature-item">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  {selectedProject.features.length > 10 && (
+                    <div className="read-more-section">
+                      <Button
+                        type="link"
+                        onClick={() => setShowAllFeatures(!showAllFeatures)}
+                        className="read-more-button"
+                      >
+                        {showAllFeatures ? 'Show Less' : `Read More (+${selectedProject.features.length - 10} more)`}
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              )}
               
               <div className="modal-actions">
                 <Button

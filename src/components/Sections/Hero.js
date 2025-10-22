@@ -105,7 +105,7 @@ const Hero = () => {
             
             <div className="typed-container">
               <div className="typed-text">
-                {['Full Stack Developer', 'React Specialist', 'Problem Solver', 'Tech Enthusiast'][currentTechIndex % 4]}
+                {['Full Stack Developer', 'AI Engineer', 'Problem Solver', 'Tech Enthusiast' , 'App Developer'][currentTechIndex % 5]}
               </div>
             </div>
             
@@ -183,76 +183,11 @@ const Hero = () => {
                     className="profile-image"
                   />
                   <div className="profile-glow"></div>
+                  <div className="profile-outline"></div>
                 </div>
               </motion.div>
 
-              {/* Revolving Skill Icons */}
-              <div className="revolving-skills-container">
-                {portfolioData.techStack.slice(0, 6).map((tech, index) => {
-                  const angle = (index * 60) - 90; // Start from top, 60 degrees apart
-                  const radius = 180; // Distance from center
-                  const x = Math.cos(angle * Math.PI / 180) * radius;
-                  const y = Math.sin(angle * Math.PI / 180) * radius;
-                  
-                  return (
-                    <motion.div
-                      key={tech.name}
-                      className={`revolving-skill-icon ${index === currentTechIndex ? 'active' : ''}`}
-                      initial={{ 
-                        opacity: 0, 
-                        scale: 0,
-                        x: 0,
-                        y: 0
-                      }}
-                      animate={{ 
-                        opacity: 1, 
-                        scale: 1,
-                        x: x,
-                        y: y,
-                        rotate: [0, 360]
-                      }}
-                      transition={{ 
-                        delay: 0.8 + (index * 0.1),
-                        type: "spring",
-                        stiffness: 100,
-                        rotate: {
-                          duration: 20,
-                          repeat: Infinity,
-                          ease: "linear"
-                        }
-                      }}
-                      whileHover={{ scale: 1.2, rotate: 0 }}
-                      style={{
-                        '--tech-color': tech.color,
-                        '--angle': `${angle}deg`,
-                        '--radius': `${radius}px`,
-                        animationDelay: `${index * 0.2}s`
-                      }}
-                    >
-                      <div className="skill-icon-wrapper">
-                        <div className="skill-icon-inner">
-                          <span className="tech-emoji">
-                            {tech.icon === 'react' && '⚛️'}
-                            {tech.icon === 'typescript' && '🔷'}
-                            {tech.icon === 'nodejs' && '🟢'}
-                            {tech.icon === 'python' && '🐍'}
-                            {tech.icon === 'javascript' && '🟨'}
-                            {tech.icon === 'mongodb' && '🍃'}
-                            {tech.icon === 'postgresql' && '🐘'}
-                            {tech.icon === 'aws' && '☁️'}
-                            {tech.icon === 'docker' && '🐳'}
-                            {tech.icon === 'git' && '📝'}
-                          </span>
-                        </div>
-                        <div className="skill-tooltip">
-                          <div className="skill-name">{tech.name}</div>
-                          <div className="skill-level">{tech.level}</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
+
 
               {/* Background Decorative Elements */}
               <div className="profile-decorations">

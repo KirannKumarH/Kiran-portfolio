@@ -8,6 +8,10 @@ import './Education.css';
 const { Title, Text } = Typography;
 
 const Education = () => {
+  // Ensure data exists and is properly structured
+  const educationData = portfolioData.education || [];
+  const certificationsData = portfolioData.certifications || [];
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -66,7 +70,7 @@ const Education = () => {
                   </div>
                   
                   <div className="education-list">
-                    {portfolioData.education.map((edu, index) => (
+                    {educationData.map((edu, index) => (
                       <motion.div
                         key={index}
                         className="education-item"
@@ -112,7 +116,7 @@ const Education = () => {
                   </div>
                   
                   <div className="certifications-list">
-                    {portfolioData.certifications.map((cert, index) => (
+                    {certificationsData.map((cert, index) => (
                       <motion.div
                         key={index}
                         className="certification-item"
