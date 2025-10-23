@@ -96,7 +96,7 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="wave">👋</span> Hello, I'm
+              <span className="wave">👋</span> Hey, I'm
             </motion.div>
             
             <Title level={1} className="hero-title">

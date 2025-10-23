@@ -191,7 +191,7 @@ const Skills = () => {
               .filter((skill) => skill && skill.name)
               .map((skill, index) => (
                 <Col
-                  xs={24}
+                  xs={8}
                   sm={12}
                   md={8}
                   lg={6}
