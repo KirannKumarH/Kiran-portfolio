@@ -1,13 +1,13 @@
 {
   "personalInfo": {
-    "name": "Kiran Kumar H",
+    "name": "Kiran Kumar",
     "title": "Full Stack Developer",
     "subtitle": "Building amazing digital experiences",
     "description": "Engineer by skill and creator by passion. I love transforming real-world challenges into powerful, elegant applications.",
     "email": "1999kirankumarh@gmail.com",
     "phone": "+91 8152073271",
     "location": "Bangalore, India",
-    "resumeUrl": "/resume.pdf",
+    "resumeUrl": "/resume/Kiran Kumar H - Base.docx",
     "profileImage": "/src/assets/profile.png"
   },
   "socialLinks": {
@@ -922,6 +922,44 @@
       "institution": "MVJ College of Engineering",
       "year": "2017 - 2021",
       "description": "Comprehensive 4-year engineering program covering core computer science fundamentals, software engineering principles, data structures & algorithms, database systems, computer networks, and modern web development technologies. Gained strong foundation in programming languages, system design, and software development methodologies."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "React – The Complete Guide",
+      "issuer": "Udemy",
+      "year": "2024",
+      "description": "Comprehensive React development course covering hooks, state management, routing, and modern React patterns."
+    },
+    {
+      "name": "C# Essentials: The Complete Guide",
+      "issuer": "Udemy",
+      "year": "2024",
+      "description": "Complete C# programming course covering object-oriented programming, LINQ, async/await, and .NET framework."
+    },
+    {
+      "name": "Complete Elastic Search Masterclass with Logstash and Kibana",
+      "issuer": "Udemy",
+      "year": "2025",
+      "description": "Advanced course on Elasticsearch, Logstash, and Kibana (ELK Stack) for data analysis and visualization."
+    },
+    {
+      "name": "Python Essentials",
+      "issuer": "Udemy",
+      "year": "2022",
+      "description": "Fundamental Python programming course covering syntax, data structures, and object-oriented programming."
+    },
+    {
+      "name": "AWS Pilot",
+      "issuer": "Amazon Web Services",
+      "year": "2024",
+      "description": "AWS cloud computing fundamentals covering EC2, S3, Lambda, and other core AWS services."
+    },
+    {
+      "name": "Azure Pilot",
+      "issuer": "Microsoft",
+      "year": "2024",
+      "description": "Microsoft Azure cloud platform fundamentals covering virtual machines, storage, and cloud services."
     }
   ]
 }

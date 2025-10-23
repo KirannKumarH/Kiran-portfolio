@@ -143,12 +143,13 @@
 
 .skill-card {
   height: 100%;
+  min-height: 180px;
   border-radius: var(--radius-2xl) !important;
   box-shadow: 0 10px 30px var(--shadow-color) !important;
   border: 1px solid var(--color-border-light) !important;
   background: var(--color-bg-secondary) !important;
   transition: var(--transition-normal) !important;
-  overflow: hidden;
+  overflow: visible;
   animation: fadeInUp 0.6s ease-out both;
 }
 
@@ -248,16 +249,26 @@
 /* Category Badge */
 .skill-category {
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .category-tag {
   border-radius: 12px !important;
   font-size: 11px !important;
   font-weight: 500 !important;
-  padding: 2px 8px !important;
+  padding: 4px 10px !important;
   background: rgba(99, 102, 241, 0.1) !important;
   color: var(--color-primary) !important;
   border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
+  max-width: none;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 
@@ -321,6 +332,13 @@
     font-size: 0.9rem !important;
   }
   
+  .category-tag {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+    white-space: nowrap;
+    overflow: visible;
+  }
+  
   .summary-card .ant-card-body {
     padding: 30px 20px !important;
   }
@@ -370,6 +388,14 @@
   .skill-name {
     font-size: 0.8rem !important;
   }
+  
+  .category-tag {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+    white-space: nowrap;
+    overflow: visible;
+    line-height: 1.2;
+  }
 }
 
 @media (max-width: 480px) {
@@ -395,6 +421,10 @@
     padding: 8px 12px !important;
     font-size: 12px !important;
     margin: 0 !important;
+  }
+  
+  .skill-card {
+    min-height: 150px;
   }
   
   .skill-card .ant-card-body {

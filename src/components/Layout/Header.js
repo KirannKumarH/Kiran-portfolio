@@ -78,6 +78,7 @@ const Header = () => {
           onClose={() => setIsMobileMenuOpen(false)}
           open={isMobileMenuOpen}
           className="mobile-drawer"
+          closable={false}
         >
           <Menu
             mode="vertical"

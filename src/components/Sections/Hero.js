@@ -42,18 +42,6 @@ const Hero = () => {
     }
   };
 
-  const techVariants = {
-    hidden: { scale: 0, rotate: -180 },
-    visible: {
-      scale: 1,
-      rotate: 0,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20
-      }
-    }
-  };
 
   return (
     <section id="home" className="hero-section">

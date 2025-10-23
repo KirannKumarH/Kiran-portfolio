@@ -12,6 +12,10 @@ const Education = () => {
   const educationData = portfolioData.education || [];
   const certificationsData = portfolioData.certifications || [];
   
+  // Debug: Log the data to console
+  console.log('Education Data:', educationData);
+  console.log('Certifications Data:', certificationsData);
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

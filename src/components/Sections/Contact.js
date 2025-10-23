@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Typography, Card, Form, Input, Button, Row, Col, message } from 'antd';
+import React from 'react';
+import { Typography, Card, Button, Row, Col } from 'antd';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -10,21 +10,17 @@ import {
   GithubOutlined, 
   LinkedinOutlined, 
   TwitterOutlined,
-  DownloadOutlined,
-  SendOutlined
+  DownloadOutlined
 } from '@ant-design/icons';
-// import GitHubCalendar from 'react-github-calendar';
 import portfolioData from '../../data/portfolioData.json';
 import './Contact.css';
 
 const { Title, Paragraph, Text } = Typography;
-const { TextArea } = Input;
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [form] = Form.useForm();
-  const [loading, setLoading] = useState(false);
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,19 +44,6 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (values) => {
-    setLoading(true);
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      message.success('Message sent successfully! I\'ll get back to you soon.');
-      form.resetFields();
-    } catch (error) {
-      message.error('Failed to send message. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const contactInfo = [
     {
@@ -120,8 +103,8 @@ const Contact = () => {
             </Paragraph>
           </motion.div>
 
-          <Row gutter={[40, 40]} className="contact-content">
-            <Col xs={24} lg={12}>
+          <Row gutter={[40, 40]} className="contact-content" justify="center">
+            <Col xs={24} lg={12} xl={10}>
               <motion.div variants={itemVariants}>
                 <Card className="contact-info-card">
                   <Title level={4} className="card-title">Contact Information</Title>
@@ -191,7 +174,7 @@ const Contact = () => {
               </motion.div>
             </Col>
 
-            <Col xs={24} lg={12}>
+            {/* <Col xs={24} lg={12}>
               <motion.div variants={itemVariants}>
                 <Card className="contact-form-card">
                   <Title level={4} className="card-title">Send Message</Title>
@@ -260,46 +243,46 @@ const Contact = () => {
                   </Form>
                 </Card>
               </motion.div>
-            </Col>
+            </Col> */}
           </Row>
 
-          <motion.div className="github-section" variants={itemVariants}>
-            <Card className="github-card">
-              <Title level={4} className="github-title">GitHub Contributions</Title>
-              <Paragraph className="github-subtitle">
-                My coding activity and contributions over the past year
-              </Paragraph>
-              
-              <div className="github-calendar-container">
-                <div style={{ 
-                  padding: '40px', 
-                  background: 'rgba(255,255,255,0.1)', 
-                  borderRadius: '15px',
-                  textAlign: 'center',
-                  color: '#666'
-                }}>
-                  <h4>GitHub Contributions</h4>
-                  <p>GitHub calendar will be displayed here</p>
-                  <p>Replace "KirannKumarH" in Contact.js with your GitHub username</p>
-                </div>
-              </div>
-              
-              <div className="github-stats">
-                <div className="stat-item">
-                  <div className="stat-number">500+</div>
-                  <div className="stat-label">Contributions</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">50+</div>
-                  <div className="stat-label">Repositories</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">20+</div>
-                  <div className="stat-label">Languages</div>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
+              <motion.div className="github-section" variants={itemVariants}>
+                <Card className="github-card">
+                  <div className="github-content">
+                    <div className="github-header">
+                      <GithubOutlined className="github-icon" />
+                      <Title level={4} className="github-title">GitHub Activity</Title>
+                    </div>
+                    
+                    <Button
+                      type="primary"
+                      href="https://github.com/KirannKumarH"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      icon={<GithubOutlined />}
+                      size="large"
+                      className="github-button"
+                    >
+                      View GitHub Profile
+                    </Button>
+                    
+                    <div className="github-stats">
+                      <div className="stat-item">
+                        <div className="stat-number">67</div>
+                        <div className="stat-label">Contributions</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-number">16</div>
+                        <div className="stat-label">Repositories</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-number">5+</div>
+                        <div className="stat-label">Languages</div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
         </motion.div>
       </div>
     </section>

@@ -198,7 +198,7 @@ const Experience = () => {
                       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                       transition={{ delay: 0.5 }}
                     >
-                      <div className="stat-number">{portfolioData.experience.length}+</div>
+                      <div className="stat-number">4+</div>
                       <div className="stat-label">Years Experience</div>
                     </motion.div>
                     
@@ -208,7 +208,7 @@ const Experience = () => {
                       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                       transition={{ delay: 0.6 }}
                     >
-                      <div className="stat-number">50+</div>
+                      <div className="stat-number">20+</div>
                       <div className="stat-label">Projects Completed</div>
                     </motion.div>
                     
@@ -218,7 +218,7 @@ const Experience = () => {
                       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                       transition={{ delay: 0.7 }}
                     >
-                      <div className="stat-number">20+</div>
+                      <div className="stat-number">40+</div>
                       <div className="stat-label">Technologies</div>
                     </motion.div>
                     
@@ -236,7 +236,7 @@ const Experience = () => {
                   <div className="skills-summary">
                     <Title level={5} className="summary-title">Core Competencies</Title>
                     <div className="competency-list">
-                      {['Full Stack Development', 'Team Leadership', 'Agile Methodologies', 'Cloud Architecture', 'Code Review', 'Mentoring'].map((skill, index) => (
+                      {['Full Stack Development', 'Performance Optimization', 'System Design', 'Database Design', 'AI & ML Development', 'Team Mentoring'].map((skill, index) => (
                         <motion.div
                           key={skill}
                           className="competency-item"
