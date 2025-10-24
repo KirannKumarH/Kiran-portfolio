@@ -184,58 +184,60 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Skills Grid */}
-        <div className="skills-grid">
-          <Row gutter={[24, 24]}>
-            {filteredSkills
-              .filter((skill) => skill && skill.name)
-              .map((skill, index) => (
-                <Col
-                  xs={8}
-                  sm={12}
-                  md={8}
-                  lg={6}
-                  xl={4}
-                  key={`${skill.name}-${index}`}
-                >
-                  <Card
-                    className="skill-card"
-                    hoverable
-                    style={{
-                      "--skill-color": skill.color || "#6366F1",
-                      animationDelay: `${index * 0.1}s`,
-                    }}
+        {/* Skills Grid Container */}
+        <div className="skills-grid-container">
+          <div className="skills-grid">
+            <Row gutter={[24, 24]}>
+              {filteredSkills
+                .filter((skill) => skill && skill.name)
+                .map((skill, index) => (
+                  <Col
+                    xs={8}
+                    sm={12}
+                    md={8}
+                    lg={6}
+                    xl={4}
+                    key={`${skill.name}-${index}`}
                   >
-                    <div className="skill-content">
-                      {/* Skill Icon */}
-                      <div
-                        className="skill-icon"
-                        style={{ backgroundColor: skill.color || "#6366F1" }}
-                      >
-                        <span className="icon-emoji">{skill.icon || "🔧"}</span>
-                      </div>
+                    <Card
+                      className="skill-card"
+                      hoverable
+                      style={{
+                        "--skill-color": skill.color || "#6366F1",
+                        animationDelay: `${index * 0.1}s`,
+                      }}
+                    >
+                      <div className="skill-content">
+                        {/* Skill Icon */}
+                        <div
+                          className="skill-icon"
+                          style={{ backgroundColor: skill.color || "#6366F1" }}
+                        >
+                          <span className="icon-emoji">{skill.icon || "🔧"}</span>
+                        </div>
 
-                      {/* Skill Name */}
-                      <Title level={5} className="skill-name">
-                        {skill.name || "Unknown Skill"}
-                      </Title>
+                        {/* Skill Name */}
+                        <Title level={5} className="skill-name">
+                          {skill.name || "Unknown Skill"}
+                        </Title>
 
-                      {/* Proficiency Rating */}
-                      <div className="proficiency-rating">
-                        {renderProficiencyDots(skill.proficiency || 1)}
-                      </div>
+                        {/* Proficiency Rating */}
+                        <div className="proficiency-rating">
+                          {renderProficiencyDots(skill.proficiency || 1)}
+                        </div>
 
-                      {/* Category Badge */}
-                      <div className="skill-category">
-                        <Tag className="category-tag" color="blue">
-                          {getCategoryDisplayName(skill.category || "unknown")}
-                        </Tag>
+                        {/* Category Badge */}
+                        <div className="skill-category">
+                          <Tag className="category-tag" color="blue">
+                            {getCategoryDisplayName(skill.category || "unknown")}
+                          </Tag>
+                        </div>
                       </div>
-                    </div>
-                  </Card>
-                </Col>
-              ))}
-          </Row>
+                    </Card>
+                  </Col>
+                ))}
+            </Row>
+          </div>
         </div>
       </div>
     </section>
