@@ -268,7 +268,7 @@ const Contact = () => {
                     
                     <div className="github-stats">
                       <div className="stat-item">
-                        <div className="stat-number">67</div>
+                        <div className="stat-number">100+</div>
                         <div className="stat-label">Contributions</div>
                       </div>
                       <div className="stat-item">
@@ -276,7 +276,7 @@ const Contact = () => {
                         <div className="stat-label">Repositories</div>
                       </div>
                       <div className="stat-item">
-                        <div className="stat-number">5+</div>
+                        <div className="stat-number">15+</div>
                         <div className="stat-label">Languages</div>
                       </div>
                     </div>

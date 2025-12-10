@@ -124,11 +124,12 @@ const Projects = () => {
                           <div className="project-image">
                             <div className="image-placeholder">
                               <img 
-                                src={`/project-banner/${project.id === 1 ? 'neuraleye' : 
-                                  project.id === 2 ? 'proforma' : 
+                                src={project.image || `/project-banner/${project.id === 1 ? 'neuraleye' : 
+                                  project.id === 2 ? 'tracklink' : 
                                   project.id === 3 ? 'seronic' : 
-                                  project.id === 4 ? 'ai-chatbot' : 
-                                  project.id === 5 ? 'portfolio' : 'proforma'}.png`}
+                                  project.id === 4 ? 'portfolio' : 
+                                  project.id === 5 ? 'ai-chatbot' :
+                                  project.id === 6 ? 'proforma' : 'neuraleye'}.png`}
                                 alt={project.title}
                                 className="project-banner-image"
                                 onError={(e) => {

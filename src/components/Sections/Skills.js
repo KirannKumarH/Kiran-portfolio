@@ -18,7 +18,7 @@ const Skills = () => {
       count: (skillsData.frontend?.filter(skill => 
         ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Python', 'C#', 'Java', 'Dart', 'Kotlin', 'Swift'].includes(skill.name)
       ) || []).length + (skillsData.backend?.filter(skill => 
-        ['Python', 'C#', 'Java', 'Dart'].includes(skill.name)
+        ['Python', 'C#', 'Java', 'Dart', 'Golang'].includes(skill.name)
       ) || []).length + (skillsData.app?.filter(skill => 
         ['Kotlin', 'Swift'].includes(skill.name)
       ) || []).length,
@@ -82,7 +82,7 @@ const Skills = () => {
           ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Python', 'C#', 'Java', 'Dart', 'Kotlin', 'Swift'].includes(skill.name)
         ) || []),
         ...(skillsData.backend?.filter(skill => 
-          ['Python', 'C#', 'Java', 'Dart'].includes(skill.name)
+          ['Python', 'C#', 'Java', 'Dart', 'Golang'].includes(skill.name)
         ) || []),
         ...(skillsData.app?.filter(skill => 
           ['Kotlin', 'Swift'].includes(skill.name)
