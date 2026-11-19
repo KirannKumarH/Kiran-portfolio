@@ -23,9 +23,10 @@ The portfolio is an evidence-led product engineering journal. Product screenshot
 ## Components
 
 - Persistent, keyboard-operable site navigation with a compact mobile menu.
-- Asymmetric project rows that prioritize verified product imagery.
+- Three compact flagship project cards with real product imagery; four earlier projects are available through a counted expansion control.
 - Evidence-based case-study sections with explicit product workflow stages.
-- Compact work-history, capability, and service listings.
+- Collapsible engineering experience and service rows keep their summaries visible. Experience is grouped by delivery area, without employer names or employment dates.
+- A keyboard-operable category tab list presents one skill group at a time; it scrolls horizontally on mobile.
 - Direct email and professional-profile links; no backendless form.
 
 ## Interaction
@@ -34,9 +35,13 @@ The portfolio is an evidence-led product engineering journal. Product screenshot
 - Reduced-motion preference disables smooth scrolling and animated transitions.
 - Links use text labels plus simple directional markers; hover only changes color or shifts a control slightly.
 - Product screenshots use lazy loading after the first project and explicit descriptive alternative text.
+- Project expansion state survives case-study navigation within the browser session. A lower collapse control returns focus and scroll position to the main toggle.
+- Engineering experience and services use native details disclosures. The complete project list and 110 skills remain available.
 
 ## Content rules
 
 - Distinguish public product behavior from resume-sourced implementation details.
 - Mark product demo figures and walkthroughs as illustrative where the product does.
 - Do not claim freelance availability, private employer architecture, customer results, or public code repositories without confirmation.
+
+- Employment privacy: no employer identifiers in visible copy, structured metadata, or downloadable files. Ketrium Labs remains the public product-company context.

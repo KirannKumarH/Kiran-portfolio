@@ -18,6 +18,6 @@ Create a production build with `npm run build`. The app uses Create React App, R
 - `/work/citetrail` — CiteTrail engineering case study.
 - `/work/neuraleye` — NeuralEye engineering case study.
 
-Case-study content and featured project summaries are maintained in `src/data/caseStudies.js`. Product screenshots under `public/project-screenshots/` are captures of the public product pages; they do not represent logged-in customer accounts. Historical project illustrations under `public/project-illustrations/` are labeled as portfolio illustrations, not public product screenshots. Resume download: `public/resume/Kiran-Kumar-H-Resume.pdf`.
+Case-study content and featured project summaries are maintained in `src/data/caseStudies.js`. Product screenshots under `public/project-screenshots/` are captures of the public product pages; they do not represent logged-in customer accounts. Historical project illustrations under `public/project-illustrations/` are labeled as portfolio illustrations, not public product screenshots. Employment resumes are kept outside the site repository. Do not add resume downloads or employer identifiers to the public portfolio.
 
 Contact uses a direct `mailto:` link. No form backend is configured.

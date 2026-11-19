@@ -25,19 +25,19 @@ The portfolio serves two audiences in one website: prospective project partners 
 
 ## Capabilities and Constraints
 
-- The portfolio describes Kiran as a Senior Software Developer at London Stock Exchange Group from April 2026 to present, as provided in the brief dated 2026-11-15.
+- Present combined engineering capabilities without employer names, employment dates, or a company-by-company timeline. This portfolio supports freelance inquiries and projects through Ketrium Labs.
 - Kiran is also Co-Founder and CTO of Ketrium Labs.
 - Freelance availability is undecided. The portfolio must not claim that he is currently available; use an open-ended project discussion CTA.
 - Product claims must be grounded in the provided brief, resume, repository, or public product pages. Do not invent customers, outcomes, architecture, usage metrics, or shipped capabilities.
 - Clearly mark illustrative examples shown by product sites. Do not present them as customer results.
 - Do not publish private employer information, credentials, or customer data.
 - No contact submission backend is configured in the repository. Contact should use working direct links unless a verified backend is added later.
-- Use a PDF resume that is present in the repository.
+- Do not publish employment resumes or a resume download. Private resume files are kept outside the site repository.
 
 ## Evidence on Hand
 
 - User-provided project brief and employment context.
-- Resume files: `public/resume/Kiran Kumar H - Base-V1.docx` and `public/resume/Kiran Kumar H - Base.pdf`.
+- User-supplied resumes inform high-level capabilities; private copies are stored outside the site repository.
 - Existing project source and product records under `src/`.
 - Public product pages: [ClickTrail](https://clicktrail.cloud/), [CiteTrail](https://citetrail.cloud/), [NeuralEye](https://neuraleye.cloud/), and [Ketrium Labs](https://ketriumlabs.com/).
 - Product-page screenshots captured on 2026-11-15 are stored in `public/project-screenshots/`; these show public product pages and demo material, not authenticated customer accounts. They are original screenshots, not synthetic images.

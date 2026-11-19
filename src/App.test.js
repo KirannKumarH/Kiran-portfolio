@@ -2,11 +2,18 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
+beforeEach(() => {
+  sessionStorage.clear();
+  window.history.replaceState({}, '', '/');
+});
+
 test('home page explains Kiran’s focus and links to all three live products', () => {
   render(<App />);
 
   expect(screen.getByRole('heading', { level: 1, name: /Senior Full Stack Developer building scalable SaaS & AI products/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: 'Featured projects' })).toBeInTheDocument();
+  expect(screen.queryByRole('heading', { name: 'MatterFunds' })).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Show 4 more projects' }));
   expect(screen.getByRole('heading', { name: 'MatterFunds' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: 'Seronic Hub 360' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: 'Intelligent Database Analyzer Chatbot' })).toBeInTheDocument();
@@ -16,7 +23,7 @@ test('home page explains Kiran’s focus and links to all three live products', 
   fireEvent.click(expandProject);
   expect(expandProject.closest('details')).toHaveAttribute('open');
   expect(screen.getByText(/Financial pro forma workflows for structured statements/)).toBeInTheDocument();
-  expect(screen.getByRole('link', { name: /Download resume/i })).toHaveAttribute('href', '/resume/Kiran-Kumar-H-Resume.pdf');
+  expect(screen.getByRole('link', { name: /Explore my experience/i })).toHaveAttribute('href', '#experience');
   expect(screen.getAllByRole('link', { name: /GitHub/i }).every((link) => link.getAttribute('href') === 'https://github.com/KirannKumarH')).toBe(true);
   expect(screen.getAllByRole('link', { name: /LinkedIn/i }).every((link) => link.getAttribute('href') === 'https://www.linkedin.com/in/kiran-kumar-h-7ba210183/')).toBe(true);
 
@@ -49,4 +56,39 @@ test('mobile navigation opens, exposes links, and closes accessibly on Escape', 
 
   expect(openButton).toHaveAttribute('aria-expanded', 'false');
   expect(openButton).toHaveFocus();
+});
+
+
+test('project previews expand and collapse without removing the flagship links', () => {
+  render(<App />);
+  const toggle = screen.getByRole('button', { name: 'Show 4 more projects' });
+  expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  fireEvent.click(toggle);
+  expect(screen.getByRole('heading', { name: 'Enterprise Portfolio Management System' })).toBeInTheDocument();
+  fireEvent.click(toggle);
+  expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  expect(screen.queryByRole('heading', { name: 'Enterprise Portfolio Management System' })).not.toBeInTheDocument();
+  expect(screen.getAllByRole('link', { name: /View live product/i })).toHaveLength(3);
+});
+
+test('skill categories support mouse and keyboard selection while keeping one panel visible', () => {
+  render(<App />);
+  expect(screen.getByRole('tabpanel', { name: 'Backend & APIs' })).toBeVisible();
+  fireEvent.click(screen.getByRole('tab', { name: 'AI, ML & analytics' }));
+  expect(screen.getByRole('tabpanel', { name: 'AI, ML & analytics' })).toBeVisible();
+  expect(screen.getAllByRole('tabpanel')).toHaveLength(1);
+  fireEvent.keyDown(screen.getByRole('tab', { name: 'AI, ML & analytics' }), { key: 'ArrowRight' });
+  expect(screen.getByRole('tab', { name: 'Testing' })).toHaveFocus();
+  expect(screen.getByRole('tabpanel', { name: 'Testing' })).toBeVisible();
+});
+
+
+test('experience describes project capabilities without publishing employment history', () => {
+  render(<App />);
+  const experience = document.getElementById('experience');
+  expect(experience).toHaveTextContent('End-to-end product delivery');
+  expect(experience).toHaveTextContent('Backend performance & reliability');
+  expect(document.body).not.toHaveTextContent(/London Stock Exchange Group|CSGI|Cognizant/);
+  expect(screen.queryByRole('link', { name: /Download resume/i })).not.toBeInTheDocument();
+  expect(experience).not.toHaveTextContent('Selected outcomes and percentages');
 });

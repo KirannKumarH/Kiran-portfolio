@@ -121,66 +121,36 @@ export const caseStudies = [
   }
 ];
 
-export const experience = [
+export const engineeringExperience = [
   {
-    company: 'London Stock Exchange Group',
-    title: 'Senior Software Developer',
-    dates: 'April 2026 — Present',
-    summary: 'Building enterprise software in a data-intensive financial technology environment.',
+    title: 'End-to-end product delivery',
+    summary: 'From the first MVP to full-stack SaaS products, with ownership across the interface, APIs, and data.',
     highlights: [
-      'Contribute to platform architecture and backend APIs for complex financial datasets.',
-      'Design data-access and query strategies across a distributed service environment.',
-      'Add distributed tracing, application metrics, and operational monitoring with OpenTelemetry.',
-      'Integrate Redis caching for high-frequency data access and responsive application workflows.'
+      'Build React and TypeScript interfaces backed by Python, Go, and .NET services.',
+      'Design authenticated APIs, data models, reporting, and third-party integrations.',
+      'Own product and engineering direction across SaaS, AI search visibility, and computer-vision products at Ketrium Labs.'
     ],
-    technologies: ['C#', '.NET 8', 'GraphQL', 'React', 'Azure', 'SQL', 'Redis', 'OpenTelemetry']
+    technologies: ['React', 'TypeScript', 'FastAPI', 'Go', '.NET', 'PostgreSQL']
   },
   {
-    company: 'Ketrium Labs',
-    title: 'Co-Founder & CTO',
-    dates: 'Current',
-    summary: 'Co-founded a product company developing ClickTrail, CiteTrail, and NeuralEye.',
+    title: 'Backend performance & reliability',
+    summary: 'Make data-intensive applications faster and easier to operate through better queries, caching, and observability.',
     highlights: [
-      'Own product and engineering direction across SaaS, AI search visibility, and computer-vision products.',
-      'Build and operate products from initial problem framing through public product experiences.'
+      'Optimize API and database performance with asynchronous processing, query tuning, and Redis caching.',
+      'Design backend services and data-access strategies for complex financial and enterprise workflows.',
+      'Add distributed tracing, application metrics, and structured logging to support diagnosis and monitoring.'
     ],
-    technologies: ['Product engineering', 'SaaS', 'AI integrations', 'Computer vision']
+    technologies: ['C#', 'Python', 'SQL Server', 'PostgreSQL', 'Redis', 'OpenTelemetry']
   },
   {
-    company: 'CSGI',
-    title: 'Software Developer Engineer I',
-    dates: 'September 2023 — 2026',
-    summary: 'Delivered enterprise SaaS features and backend services across full product releases.',
+    title: 'Modernization & engineering delivery',
+    summary: 'Evolve existing software, automate delivery, and help teams maintain a dependable codebase.',
     highlights: [
-      'Improved API response time from 6 minutes to 15 seconds through asynchronous execution, query optimization, and caching (resume-reported).',
-      'Modernized a legacy AngularJS interface to React and TypeScript, reducing UI defects by 50% (resume-reported).',
-      'Automated remediation workflows and CI/CD; the resume reports approximately $2M/year in savings and 30% shorter release cycles.',
-      'Mentored 10 junior engineers and interns; the resume reports a 25% increase in team delivery velocity.'
+      'Modernize legacy AngularJS interfaces with React and TypeScript.',
+      'Build CI/CD pipelines and automate deployment and recurring operational workflows.',
+      'Support engineering quality through mentoring, code reviews, testing, and API documentation.'
     ],
-    technologies: ['C#', '.NET', 'React', 'TypeScript', 'SQL Server', 'PostgreSQL', 'Redis', 'Azure', 'Docker']
-  },
-  {
-    company: 'CSGI',
-    title: 'Software Developer Engineer Grad',
-    dates: 'February 2022 — August 2023',
-    summary: 'Built an internal HR management platform and supported recruiting workflows.',
-    highlights: [
-      'Delivered a full-stack MVP in 30 days using FastAPI and React with TypeScript.',
-      'Built authenticated REST APIs and candidate data validation; the resume reports an 80% reduction in manual effort.',
-      'Designed PostgreSQL schemas and CSV exports; added structured logging and automated deployment pipelines.'
-    ],
-    technologies: ['Python', 'FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'GitHub Actions']
-  },
-  {
-    company: 'Cognizant',
-    title: 'Programmer Analyst Trainee',
-    dates: 'February 2021 — February 2022',
-    summary: 'Completed full-stack engineering training and built a task-tracking proof of concept.',
-    highlights: [
-      'Built a React and FastAPI application with REST integration, CRUD workflows, and JWT authentication.',
-      'Practiced Agile delivery, API documentation, testing, and deployment with Azure DevOps.'
-    ],
-    technologies: ['Python', 'FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Azure DevOps']
+    technologies: ['React', 'TypeScript', 'Docker', 'Azure', 'GitHub Actions', 'CI/CD']
   }
 ];
 
